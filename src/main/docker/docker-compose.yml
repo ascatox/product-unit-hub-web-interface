@@ -1,0 +1,19 @@
+version: '3.5'
+services:
+  product-unit-hub-web-interface:
+    container_name: product-unit-hub-web-interface
+    image: faredge/product-unit-hub-web-interface
+    environment:
+      - JAVA_OPTIONS='-Xmx300m'
+    ports:
+      - 8380:8380
+    volumes:
+      - /opt/hyperledger/configuration-network-fabric/crypto-config:/crypto-config
+    external_links:
+      - ca.example.com
+      - orderer.example.com
+      - peer0.org1.example.com
+      - peer1.org1.example.com
+      - peer2.org1.example.com
+      - peer3.org1.example.com
+    network_mode: configurationservice_byfn

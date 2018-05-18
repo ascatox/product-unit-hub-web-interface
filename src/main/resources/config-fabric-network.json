@@ -3,12 +3,12 @@
   "type": "hlfv1.1",
   "channelName": "ledgerchannel",
   "timeout": 5000,
-  "cryptoconfigdir": "",
+  "cryptoconfigdir": "/crypto-config",
   "tls": false,
   "chaincode": {
     "path": "product-unit-hub-chaincode",
     "name": "productunithub",
-    "version": "3.7",
+    "version": "1.0",
     "lang": "NODE"
   },
   "organizations": [
@@ -18,18 +18,33 @@
       "peers": [
         {
           "name": "peer0.org1.example.com",
-          "requestURL": "grpc://167.99.89.178:7051",
-          "eventURL": "grpc://167.99.89.178:7053"
+          "requestURL": "grpc://peer0.org1.example.com:7051",
+          "eventURL": "grpc://peer0.org1.example.com:7053"
+        },
+        {
+          "name": "peer1.org1.example.com",
+          "requestURL": "grpc://peer1.org1.example.com:7051",
+          "eventURL": "grpc://peer1.org1.example.com:7053"
+        },
+        {
+          "name": "peer2.org1.example.com",
+          "requestURL": "grpc://peer2.org1.example.com:7051",
+          "eventURL": "grpc://peer2.org1.example.com:7053"
+        },
+        {
+          "name": "peer3.org1.example.com",
+          "requestURL": "grpc://peer3.org1.example.com:7051",
+          "eventURL": "grpc://peer3.org1.example.com:7053"
         }
       ],
       "ca": {
-        "url": "http://167.99.89.178:7054",
+        "url": "http://ca.example.com:7054",
         "name": "ca.example.com"
       },
       "orderers": [
         {
           "name": "orderer.example.com",
-          "url": "grpc://167.99.89.178:7050"
+          "url": "grpc://orderer.example.com:7050"
         }
       ],
       "users": [
