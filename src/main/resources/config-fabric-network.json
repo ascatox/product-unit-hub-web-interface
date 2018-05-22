@@ -2,7 +2,7 @@
   "name": "fabric-network",
   "type": "hlfv1.1",
   "channelName": "ledgerchannel",
-  "timeout": 5000,
+  "timeout": 15000,
   "cryptoconfigdir": "/crypto-config",
   "tls": false,
   "chaincode": {
@@ -20,21 +20,6 @@
           "name": "peer0.org1.example.com",
           "requestURL": "grpc://peer0.org1.example.com:7051",
           "eventURL": "grpc://peer0.org1.example.com:7053"
-        },
-        {
-          "name": "peer1.org1.example.com",
-          "requestURL": "grpc://peer1.org1.example.com:7051",
-          "eventURL": "grpc://peer1.org1.example.com:7053"
-        },
-        {
-          "name": "peer2.org1.example.com",
-          "requestURL": "grpc://peer2.org1.example.com:7051",
-          "eventURL": "grpc://peer2.org1.example.com:7053"
-        },
-        {
-          "name": "peer3.org1.example.com",
-          "requestURL": "grpc://peer3.org1.example.com:7051",
-          "eventURL": "grpc://peer3.org1.example.com:7053"
         }
       ],
       "ca": {
