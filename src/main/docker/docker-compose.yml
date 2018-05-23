@@ -1,4 +1,4 @@
-version: '3.5'
+version: '2.0'
 services:
   product-unit-hub-web-interface:
     container_name: product-unit-hub-web-interface
